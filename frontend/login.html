@@ -18,20 +18,21 @@
                     <p class="info">Sign up to see photo and videos from your friends.</p>
                     <button type="submit" class="btn btn-primary btn-block"><i class="fa-brands ff fa-facebook"></i>Log in with Facebook</button>
                     <p class="or">OR</p>
-                    <form action="">
+                    <form action="http://localhost:3000/sign_up" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Mobile Number or Email">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Your Email">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Full Name">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username">
+                            <input type="text" class="form-control" id="uname" name="uname" placeholder="Username">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
                         </div>
-                        <buton type="submit" class="btn btn-primary btn-block">Sign up</buton>
+                        <input type="submit" id="submitDetails" name="submitDetails" class="btn btn-primary btn-block" value="Submit" />
+                        <!-- <buton type="submit" class="btn btn-primary btn-block">Sign up</buton> -->
                     </form>
                     <p class="term">By signing up, you agree to our<b>Terms,Data Policy</b>and<b>Cookies Policy</b>.</p>
                 </div>

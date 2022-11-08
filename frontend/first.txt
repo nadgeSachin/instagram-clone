@@ -1,0 +1,109 @@
+const express = require("express");
+const app = express();
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true })); 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.post("/post", (req, res) => {
+    console.log("Connected to React..");
+    console.log(req.body.name);
+    console.log(req.body.email);
+    res.redirect("/");
+  });  
+const PORT = process.env.PORT || 8000; 
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
+
+
+
+
+const {MongoClient}=require('mongodb');
+const url='mongodb://localhost:27017/';
+const databaseName='ak47';
+const client=new MongoClient(url);
+async function dbConnect(){
+    let result=await client.connect();
+    db=result.db(databaseName);
+   return db.collection('password');
+}
+module.exports=dbConnect;
+
+
+
+
+
+// const dbConnect=require('./mongodb');
+// const insertData=async ()=>{
+// let data = await dbConnect();
+// let result=await data.insertOne({name:'Error1',Address:'Chisda',mobile:7687656789});
+//     console.log("Data is inserted");
+// }
+// insertData();
+const dbConnect=require('./mongodb');
+const express = require("express");
+const bodyParser = require("body-parser")
+  
+// New app using express module
+const app = express();
+app.use(bodyParser.urlencoded({
+    extended:true
+}));
+
+
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + "/insert.html");
+});
+
+app.get("/log", function(req, res) {
+  res.sendFile(__dirname + "/log.html");
+});
+
+
+app.post("/log", function(req, res) {
+  var name = req.body.name;
+  var pass = req.body.pass; 
+  const insertData=async ()=>{
+  let data = await dbConnect();
+  let result=await data.insertOne({username:name,password:pass});
+  console.log("Data is inserted");
+}
+insertData();
+});
+
+
+  
+app.post("/", function(req, res) {
+  var name = req.body.name;
+  var address = req.body.addr; 
+  var mobile =Number(req.body.mob); 
+  const insertData=async ()=>{
+  let data = await dbConnect();
+  let result=await data.insertOne({name:name,Address:address,mobile:mobile});
+  //alert("Data Inserted..Successfully"); 
+  console.log("Data is inserted");
+}
+insertData();
+});
+
+
+app.listen(8080, function(){
+console.log("server is running on port 3000");
+});
+
+
+
+
+const dbConnect=require('./mongodb');
+const showData=async ()=>{
+dbConnect().then((res)=>{
+    res.find({}).toArray().then((data)=>{
+        
+        for(i=1;i<data.length;i++){
+            console.log(data[i].username);
+        }
+    })
+})
+}
+showData();
+
