@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(body_parser.urlencoded({ extended: false }));
 app.use('/static', express.static("public"));
 
-app.use("/api",AuthRoute);
+app.get("/api",AuthRoute);
 
 var Storage = multer.diskStorage({
     destination: (req, file, cb) => {

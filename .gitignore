@@ -12,5 +12,7 @@ node_modules
 
 # Ignore SASS config files
 .sass-cache
-
+server
+server1
+ss.zip
 fileupload
