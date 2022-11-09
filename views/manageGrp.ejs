@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
-    <link rel="stylesheet" href="/style/Chats.css"/>
+    <link rel="stylesheet" href="../static/css/manageGrp.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="insta">
         <header>
             <div class="logo">
-                <img src="/images/insta.png" alt="" class="lg">
+                <img src="../static/image/insta.png" alt="" class="lg">
             </div>
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -20,12 +20,12 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/frontend/home.html"><i class="fas fa-home"></i></a></li>
-                    <li><a href="/frontend/Chats.html"><i class="fab fa-facebook-messenger"></i></a></li>
-                    <li><a href="/frontend//createPost.html"><i class="far fa-plus-square"></i></a></li>
-                    <li><a href="/frontend/manageGrp.html"><i class="fa-solid fa-user-group"></i></a></li>
-                    <li><a href="/frontend/notification.html"><i class="far fa-heart"></i></a></li>
-                    <li><a href=""><img src="/images/pp1.jpeg" alt=""></a></li>
+                    <li><a href="/"><i class="fas fa-home"></i></a></li>
+                    <li><a href="/Chats"><i class="fab fa-facebook-messenger"></i></a></li>
+                    <li><a href="/createPost"><i class="far fa-plus-square"></i></a></li>
+                    <li><a href="/manageGrp"><i class="fa-solid fa-user-group"></i></a></li>
+                    <li><a href="/notification"><i class="far fa-heart"></i></a></li>
+                    <li><a href=""><img src="../static/image/pp1.jpeg" alt=""></a></li>
                 </ul>
             </nav>
         </header>
@@ -34,29 +34,49 @@
                 <div class="posts">
                     <div class="post-title ">
                         <div class="post-left">
-                            <div class="image">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
                             <div class="details">
-                                <p class="name name-title">Chats</p>
-                            </div>
-                            <div class="search-box">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="search" placeholder="Search">     
+                                <p class="name name-title">Manage Group</p>
                             </div>
                         </div>
                         <div class="post-right">
-                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-xmark"></i>
                         </div>
                     </div>
-                    
+                    <div class="post-title req-title grp-request">
+                        <div class="post-left">
+                            <div class="image msgchats">
+                                <i class="fa-regular fa-comment-dots"></i>
+                            </div>
+                            <div class="details">
+                                <p class="name">Group Requests</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-title req-title btn-ctr-grp">
+                        <div class="post-left">
+                            <div class="image ">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </div>
+                            <div class="details">
+                                <p class="name">Create Group</p>
+                            </div>
+                        </div>
+                    </div>
                     <hr style="border: 0.5px solid;"/>
+                    <div class="post-footer">
+                        <div class="like-share-comment">
+                            <p>All Groups</p>
+                        </div>
+                        <div class="save">
+                            <a href="#" style="color:royalblue;font-size: 18px; text-decoration: none;">MANAGE</a>
+                        </div>
+                    </div>
 
                     <div class="allgrp">
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst.jpeg" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst.jpeg" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group One</p>
@@ -67,7 +87,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst1.webp" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst1.webp" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group Two</p>
@@ -77,7 +97,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst.jpeg" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst.jpeg" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group One</p>
@@ -88,7 +108,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst1.webp" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst1.webp" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group Two</p>
@@ -98,7 +118,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst.jpeg" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst.jpeg" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group One</p>
@@ -109,7 +129,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst1.webp" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst1.webp" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group Two</p>
@@ -119,7 +139,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst.jpeg" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst.jpeg" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group One</p>
@@ -130,7 +150,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst1.webp" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst1.webp" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group Two</p>
@@ -141,7 +161,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst.jpeg" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst.jpeg" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group One</p>
@@ -152,7 +172,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst1.webp" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst1.webp" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group Two</p>
@@ -162,7 +182,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst.jpeg" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst.jpeg" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group One</p>
@@ -173,7 +193,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst1.webp" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst1.webp" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group Two</p>
@@ -183,7 +203,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst.jpeg" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst.jpeg" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group One</p>
@@ -194,7 +214,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst1.webp" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst1.webp" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group Two</p>
@@ -204,7 +224,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst.jpeg" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst.jpeg" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group One</p>
@@ -215,7 +235,7 @@
                     <div class="post-title">
                         <div class="post-left">
                             <div class="image img-grp">
-                                <img src="/images/inst1.webp" width="32px" height="32px" alt="">
+                                <img src="../static/image/inst1.webp" width="32px" height="32px" alt="">
                             </div>
                             <div class="details">
                                 <p class="name">Group Two</p>
@@ -223,9 +243,22 @@
                         </div>
                     </div>
                 </div>
+
                     <!-- <div style="height:300px"></div>
                 </div> -->
-            </div> </section>
+            </div>
+        </section>
     </div>
+
+    <script>
+        document.getElementsByClassName('btn-ctr-grp')[0]
+        .addEventListener('click', function (event) {
+            window.location.replace("/frontend/createPost.html");
+        });
+        document.getElementsByClassName('grp-request')[0]
+        .addEventListener('click', function (event) {
+            window.location.replace("/frontend/notification.html");
+        });
+    </script>
 </body>
 </html>

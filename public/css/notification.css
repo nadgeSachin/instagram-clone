@@ -79,6 +79,7 @@ section{
 
 /* Post Style */
 .posts{
+    height: 640px;
     margin: 25px 0;
     background-color: white;
     border: 1px solid rgba(219,219,219,1);
@@ -124,7 +125,7 @@ section{
 .posts .post-footer{
     display: flex;
     justify-content: space-between;
-    padding: 16px;
+    /* padding: 16px; */
 }
 
 .posts .post-footer .save{
@@ -184,7 +185,8 @@ align-items: center;
 }
 
 .allgrp{
-    height: 520px;
+    width: 100%;
+    /* height: 520px; */
     display: grid;
     background-color: #fff;
     border: 1px solid rgba(219,219,219,1);
