@@ -44,21 +44,30 @@
                     </div>
                     <div class="post-footer">
                         <div class="like-share-comment allgrp">
+                            <form action="/createpost" method="POST" enctype="multipart/form-data">
+			
                             <div class="crt-label">
                                 <p>Upload Image</p>
                             </div>
                             <div class="decription">
-                                <input id="w3review" placeholder="Username" name="dsc" class="user-name">     
+                                <input class="v r" type="text" id="name" placeholder="Name" 
+                       value="" name="name" class="user-name" required>
+                                <!-- <input id="w3review" placeholder="Username" name="uname" class="user-name">      -->
                             </div>
                             <div class="upload-file">
-                                <input type="file" accept="image/*">
+                                <input class="v" type="file" id="image" name="image" value="" required>
+                                <!-- <input type="file" name="file" accept="image/*"> -->
                             </div>
                             <div class="decription">
-                                <textarea id="w3review" placeholder="Description" name="dsc" class="dsc" rows="4" cols="50"></textarea>     
+                                <textarea class="v r" id="desc" name="desc"  class="dsc" value="" rows="4" 
+                          placeholder="Description" cols="50" required>
+                </textarea>
+                                <!-- <textarea id="w3review" placeholder="Description" name="desc" class="dsc" rows="4" cols="50"></textarea>      -->
                             </div>
                             <div class="crt-btn">
                                 <input type="submit" value="Create Post" class="crt-btn-btn">
                             </div>
+                            </form>
                         </div>
                     </div>
             
