@@ -185,17 +185,17 @@ app.post('/signup', upload.single('image'), (req, res, next) => {
 
 
 app.get("/profile", (req, res) => {
-    // loginmodel.find({}, (err, items) => {
-    //     if (err) {
-    //         console.log(err);
-    //         res.status(500).send('An error occurred', err);
-    //     }
-    //     else {
-    //         res.render('profile', { uname: items[0].uname });
-    //     }
-    // });
-        console.log(req.app.locals.cats+"in profile");
-    res.render('profile', { uname: req.app.locals.cats});
+    loginmodel.find({}, (err, items) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send('An error occurred', err);
+        }
+        else {
+            res.render('profile', { uname: items[0].uname });
+        }
+    });
+    //     console.log(req.app.locals.cats+"in profile");
+    // res.render('profile', { uname: req.app.locals.cats});
 });
 
 app.get("/like",function(re,res){
@@ -268,8 +268,17 @@ app.post("/logout", (req, res) => {
 
 });
 
+app.post("/creategrp", (req, res) => {
+    res.render("manageGrp");
+});
 
+app.get("/comment", (req, res) => {
+    res.render("comment");
+});
 
+app.get("/invitegrp", (req, res) => {
+    res.render("inviteGroup");
+});
 
 
 const PORT = process.env.PORT || 8000; 

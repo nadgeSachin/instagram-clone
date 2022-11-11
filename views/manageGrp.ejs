@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         <div class="post-right">
-                            <i class="fa-solid fa-xmark"></i>
+                            <a href="/"><i class="fa-solid fa-xmark"></i></a>
                         </div>
                     </div>
                     <div class="post-title req-title grp-request">
@@ -48,7 +48,11 @@
                                 <i class="fa-regular fa-comment-dots"></i>
                             </div>
                             <div class="details">
-                                <p class="name">Group Requests</p>
+                                <p class="name">
+                                    <!-- <form id="form" action="http://localhost:8000/invitegrp" method="get">
+                                        <a class="likes" onclick="document.getElementById('form').submit();">Group Requests</a></form> -->
+                                        <a class="likes" href="/invitegrp"> Group Requests</a>
+                                    </p>
                             </div>
                         </div>
                     </div>
@@ -58,7 +62,12 @@
                                 <i class="fa-solid fa-user-plus"></i>
                             </div>
                             <div class="details">
-                                <p class="name">Create Group</p>
+                                <p class="name">
+                                    <!-- <form id="form" action="http://localhost:8000/creategrp" method="get"> -->
+                                        <a class="likes" href="/creategrp"> Create Group</a>
+                                    <!-- </form> -->
+                                   
+                                   </p>
                             </div>
                         </div>
                     </div>

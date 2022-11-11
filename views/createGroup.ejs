@@ -7,6 +7,233 @@
     <title>Instagram</title>
     <link rel="stylesheet" href="../static/image/createGruop.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+.story{
+    padding: 16px;
+}
+.story .stories{
+    width: 83%; 
+    display: grid;
+    justify-content: center; 
+}
+.story .stories a img{
+    border-radius: 50%;
+    border: 2px solid rgb(226, 82, 130);
+    padding: 1px;
+    object-fit: cover;
+}
+.story .stories p{
+    
+    white-space: nowrap;
+}
+
+.btn{
+    margin: 12px auto;
+    padding: 2px!important;
+    font-weight: 600!important;
+}
+.btn-primary{
+    background-color: #3897f0!important;
+    border: 1px solid #3897f0!important;
+}
+.form-group{
+    margin-bottom: 6px!important;
+}
+.form-control{
+    background: #fafafa!important;
+    border: 1px solid #efefef!important;
+    font-size: 12px!important;
+
+}
+
+.right-column{
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* body Section */
+section{
+    padding: 30px 18%;
+    background-color: #fff;
+    display: flex;
+}
+.left-side{
+    width: 65%;
+}
+.right-side{
+    width: 35%;
+}
+
+
+/* Post Style */
+
+.crt-grp{
+    margin-left: 72px;
+    font-weight: bold;
+    font-size: 20px;   
+}
+.msg-grp{
+    padding: 6px;
+    color: #ccc8c8;
+    
+}
+
+.form-group{
+    margin-bottom: 6px!important;
+}
+.form-control{
+    background: #fafafa!important;
+    border: 1px solid #efefef!important;
+    font-size: 14px!important;
+    padding: 16px;
+    height: 34px;
+    width: 100%;
+    border-radius: 5px;
+    color: #ccc8c8;
+}
+::placeholder{
+    color: #999!important;
+}
+
+.posts{
+    margin: 25px 0;
+    /* background-color: white; */
+    border: 1px solid rgba(219,219,219,1);
+    border-radius: 3px;
+}
+.posts .post-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 8px;
+}
+.posts .post-title .post-left{
+    width: 100%;
+     display: grid;
+     align-items: center;
+} 
+.posts .post-title .post-left .image{
+    margin-right: 15px;
+    margin-bottom: 19px;
+    color: #ccc8c8;
+}
+.posts .post-title .post-left .image img{
+    border-radius: 50%;
+    object-fit: contain;
+}
+.posts .post-title .post-left .details .name-title{
+    padding-bottom: 2px;
+    font-size: 18px;
+    color: #6dbad9;
+}
+.posts .post-content img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.posts .post-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.posts .post-footer .save{
+    font-size: 22px;
+}
+.posts .post-footer-content{
+    padding: 0 16px 16px 16px;   
+}
+.posts .post-footer-content p{
+    margin-bottom: 3px; 
+}
+.posts .post-footer-content .likes{
+    margin-bottom: 8px;
+}
+.posts .post-footer-content .name{
+    font-weight: 600;
+}
+.posts .post-footer-content span{
+    margin-left: 10px;
+    font-weight: normal;
+}
+.posts .post-footer-content .posting-time{
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+
+
+
+.chats{
+font-size: 15px;
+background-color: #1c4ad5bf;
+height: 30px;
+width: 30px;
+border-radius: 14px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.req-title:hover{
+    background-color: rgb(201, 198, 198);
+}
+
+.chats-title:hover{
+    background-color: rgb(201, 198, 198);
+}
+
+.msgchats{
+    font-size: 20px;
+background-color: #f2ad0bb5;
+height: 30px;
+width: 30px;
+border-radius: 14px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.allgrp{
+    padding: 10px;
+}
+
+
+
+
+/* Media Queries */
+@media(max-width:992px){
+    section .left-side{
+        width: 100%;
+    }
+    section .right-side{
+        display: none;
+    }
+}
+@media(max-width:768px){
+    section{
+        padding: 30px 20px;
+    }
+}
+@media(max-width:576px){
+    .search-box{
+        width: 200px;
+    }
+    
+}
+
+</style>
 </head>
 <body>
     <div class="insta">
@@ -70,10 +297,12 @@
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
-
-                            <div class="right-column text-center">
-                                    <buton type="submit" class="btn btn-primary btn-block">Create Group</buton>   
+                            <form action="http://localhost:8000/creategrp" method="post">
+                                <div class="right-column text-center">
+                                    <input type="submit" class="btn btn-primary btn-block" value="Create Group">   
                             </div>
+                            </form>
+                            
 
                         </div>
                     </div>

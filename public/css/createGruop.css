@@ -1,12 +1,7 @@
 
 
 .story{
-    /* display: flex; */
     padding: 16px;
-    /* background-color: #fff;
-    border: 1px solid rgba(219,219,219,1);
-    border-radius: 3px;
-    overflow-x: scroll; */
 }
 .story .stories{
     width: 83%; 
