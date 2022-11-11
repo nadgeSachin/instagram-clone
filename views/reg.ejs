@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="../static/css/reg.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <style>
+        .msg{
+          display: none;
+        }
+        </style>
 </head>
-<body>
+<body><center>
     <div class="containr">
         <div class="row">
             <div class="col-sm-6">
@@ -17,20 +22,31 @@
                     <img src="../static/image/insta.png" height="50px" class="instagram-logo" alt="">
                     <form action="http://localhost:8000/login" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Username or Email"/>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Username or Email" />
                         </div>
                         <div class="form-group">
                             <input type="password" id="pass" name="pass" class="form-control" placeholder="Password"/>
                         </div>
-                        <input type="submit" class="btn btn-primary btn-block" value="Submit">
+                        <p class="msg" id="msg" class="c1"style="color: #e00808;"><%=msg%></p>
+                        <input type="submit" class="btn btn-primary btn-block" value="Submit" onclick="msg()">
                     </form>
                     <p class="term"><a href="#">Forgot password</a>.</p>
                 </div>
                 <div class="right-column-login text-center">
-                    <p class="term">Don't have an account?<a href="#">Sign up</a>.</p>
+                    <p class="term">Don't have an account?<form id="form" action="http://localhost:8000/signup" method="get">
+                        <a class="likes" onclick="document.getElementById('form').submit();">SignUp</a></form></p>
                 </div>
             </div>
         </div>
     </div>
+</center>
+<script>
+function mgss(){
+   setInterval(myTimer, 1000000);
+function myTimer() {
+  document.getElementById("msg").setAttribute("class","msg");
+}
+}
+</script>
 </body>
 </html>

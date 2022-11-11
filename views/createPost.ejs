@@ -34,8 +34,9 @@
                 <div class="posts">
                     <div class="post-title ">
                         <div class="post-left">
-                            <div class="details">
-                                <p class="name name-title">Cancel</p>
+                            <div class="details"><form id="form" action="http://localhost:8000/" method="post">
+                                <a class="likes" onclick="document.getElementById('form').submit();">
+                                <p class="name name-title">Cancel</p></a></form>
                             </div>
                             <div class="details1">
                                 <p class="name name-title">Share Your Post</p>
@@ -49,20 +50,16 @@
                             <div class="crt-label">
                                 <p>Upload Image</p>
                             </div>
-                            <div class="decription">
-                                <input class="v r" type="text" id="name" placeholder="Name" 
-                       value="" name="name" class="user-name" required>
-                                <!-- <input id="w3review" placeholder="Username" name="uname" class="user-name">      -->
-                            </div>
+                           
                             <div class="upload-file">
                                 <input class="v" type="file" id="image" name="image" value="" required>
-                                <!-- <input type="file" name="file" accept="image/*"> -->
+                                
                             </div>
                             <div class="decription">
                                 <textarea class="v r" id="desc" name="desc"  class="dsc" value="" rows="4" 
                           placeholder="Description" cols="50" required>
                 </textarea>
-                                <!-- <textarea id="w3review" placeholder="Description" name="desc" class="dsc" rows="4" cols="50"></textarea>      -->
+                              
                             </div>
                             <div class="crt-btn">
                                 <input type="submit" value="Create Post" class="crt-btn-btn">

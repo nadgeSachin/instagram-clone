@@ -51,8 +51,10 @@
                               <div class="menu flex-column">
                                 <div class="profil-img"></div>
                                 <div class="profil-info">
-                                  <h2 class="name">Setiya sachin</h2>
-                                  <h3 class="city">sachin navin yad <br>kar raha hai</h3>
+                                  <h2 class="name">
+                                       <%= uname%>
+                                </h2>
+                                  <h3 class="city">Silvassa</h3>
                                   <div class="numbers">
                                     <div class="post">
                                       <p>Post</p>
@@ -67,6 +69,10 @@
                                       <div class="post-num">48m</div>
                                     </div>
                                   </div>
+                                  <form action="http://localhost:8000/logout"method="post">
+                                  <input type="submit" id="submitDetails" name="logout0" class="btn btn-primary btn-block" value="Edit Picture" />
+                                  <input type="submit" id="submitDetails" name="logout1" class="btn btn-primary btn-block" value="Logout" />
+                                </form>
                                 </div>
                               </div>
                               </div>

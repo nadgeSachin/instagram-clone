@@ -93,7 +93,7 @@ section{
 .posts .post-title .post-left{
      display: flex;
      align-items: center;
-     width: 65%;
+     width: 58%;
 } 
 .posts .post-title .post-left .image{
     margin-right: 15px;
@@ -123,7 +123,7 @@ section{
 }
 .posts .post-footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 16px;
 }
 
@@ -228,7 +228,13 @@ align-items: center;
     min-width:330px;
     
   }
-  
+  .btn{
+    width: 50%; 
+    margin: 34px auto;
+    margin-bottom: 10px;
+    padding: 9px!important;
+    font-weight: 600!important;
+}
   .profil-img {
    width: 100px;
     height: 100px;

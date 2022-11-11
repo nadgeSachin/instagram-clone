@@ -122,7 +122,7 @@ section{
     object-fit: cover;
 }
 .posts .post-footer{
-    display: flex;
+    display: grid;
     justify-content: center;
     padding: 16px;
 }
